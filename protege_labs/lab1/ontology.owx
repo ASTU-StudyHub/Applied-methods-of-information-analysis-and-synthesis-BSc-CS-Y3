@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/vladimir.generalov/ontologies/2025/1/lab1"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/vladimir.generalov/ontologies/2025/1/lab1">
+    <Prefix name="" IRI="http://www.semanticweb.org/vladimir.generalov/ontologies/2025/1/lab1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Активные"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Клиент"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Новички"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Отток"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#быть_знакомым_c"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#быть_предком"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#быть_сиблингом"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#иметь_мать"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#иметь_ребенка"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#иметь_количество_заказов"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Васильев_В."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Кузьмин_К."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Лазуткина_М."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Марьина_А."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Мурина_М."/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Новички"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Клиент"/>
+            <DataHasValue>
+                <DataProperty IRI="#иметь_количество_заказов"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Активные"/>
+        <Class IRI="#Клиент"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Новички"/>
+        <Class IRI="#Клиент"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Отток"/>
+        <Class IRI="#Клиент"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Активные"/>
+        <Class IRI="#Новички"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Активные"/>
+        <Class IRI="#Отток"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Новички"/>
+        <Class IRI="#Отток"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Новички"/>
+        <NamedIndividual IRI="#Васильев_В."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Клиент"/>
+        <NamedIndividual IRI="#Кузьмин_К."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Новички"/>
+        <NamedIndividual IRI="#Лазуткина_М."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Клиент"/>
+        <NamedIndividual IRI="#Марьина_А."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Новички"/>
+        <NamedIndividual IRI="#Мурина_М."/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#быть_сиблингом"/>
+        <NamedIndividual IRI="#Васильев_В."/>
+        <NamedIndividual IRI="#Кузьмин_К."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#иметь_мать"/>
+        <NamedIndividual IRI="#Васильев_В."/>
+        <NamedIndividual IRI="#Лазуткина_М."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#иметь_мать"/>
+        <NamedIndividual IRI="#Васильев_В."/>
+        <NamedIndividual IRI="#Мурина_М."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#иметь_ребенка"/>
+        <NamedIndividual IRI="#Лазуткина_М."/>
+        <NamedIndividual IRI="#Васильев_В."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#иметь_ребенка"/>
+        <NamedIndividual IRI="#Марьина_А."/>
+        <NamedIndividual IRI="#Мурина_М."/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#иметь_количество_заказов"/>
+        <NamedIndividual IRI="#Васильев_В."/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#иметь_количество_заказов"/>
+        <NamedIndividual IRI="#Кузьмин_К."/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#иметь_ребенка"/>
+        <ObjectProperty IRI="#быть_предком"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#иметь_мать"/>
+        <ObjectProperty IRI="#иметь_ребенка"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#иметь_мать"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#иметь_мать"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#иметь_ребенка"/>
+    </InverseFunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#быть_сиблингом"/>
+    </SymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#иметь_мать"/>
+    </AsymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#быть_предком"/>
+    </TransitiveObjectProperty>
+    <ReflexiveObjectProperty>
+        <ObjectProperty IRI="#быть_знакомым_c"/>
+    </ReflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#иметь_мать"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#иметь_ребенка"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#быть_знакомым_c"/>
+        <Class IRI="#Клиент"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#быть_предком"/>
+        <Class IRI="#Клиент"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#быть_сиблингом"/>
+        <Class IRI="#Клиент"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#иметь_мать"/>
+        <Class IRI="#Клиент"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#быть_знакомым_c"/>
+        <Class IRI="#Клиент"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#быть_предком"/>
+        <Class IRI="#Клиент"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#быть_сиблингом"/>
+        <Class IRI="#Клиент"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#иметь_мать"/>
+        <Class IRI="#Клиент"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#иметь_количество_заказов"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#иметь_количество_заказов"/>
+        <Class IRI="#Клиент"/>
+    </DataPropertyDomain>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
